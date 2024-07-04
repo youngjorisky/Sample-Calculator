@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #c77bfe, #fe7bdb, #ea8369, #f2a56a);
+}
+
+.container {
+    font-family: "Roboto Mono", monospace;
+    width: 300px;
+    height: 500px;
+    min-width: 300px;
+    min-height: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+.display {
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    position: relative;
+}
+
+.calculation {
+    color: #fe7bb4;
+    height: 35%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 10%;
+}
+
+.results {
+    color: white;
+    height: 65%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10%;
+    font-size: 2em;
+}
+
+.content {
+    height: 75%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    align-items: center;
+    justify-items: center;
+}
+
+.content > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    background-clip: padding-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content > div:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.percent, .seven, .four, .one, .zero {
+    background-color: rgba(230, 225, 225, 0.8);
+}
+
+.symbol, .eight, .five, .two, .dot {
+    background-color: rgba(238, 234, 234, 0.8);
+}
+
+.C, .nine, .six, .three {
+    background-color: rgba(255, 251, 251, 0.8);
+}
+
+.equal {
+    background-color: rgba(220, 20, 133, 0.95);
+    color: white;
+}
+
+.dash, .times, .minus, .plus {
+    background-color: blueviolet;
+    color: white;
+}
+
+@media (max-width: 300px) {
+    .calculation {
+        font-size: 0.7em;
+    }
+    .results {
+        font-size: 1.8em;
+    }
+}
